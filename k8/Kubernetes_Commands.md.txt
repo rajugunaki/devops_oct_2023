@@ -39,6 +39,12 @@ aws configure set default.output json;
 # To delete all the pods Running 
 -kubectl delete pods --all
 
+# To access a container in a pod that includes a single container, enter the following command:
+kubectl exec -it container_name bash
+
+# To access a container in a pod that includes multiple containers:
+kubectl exec -it pod_name -c container_name bash
+
 # To watch the Nodes 
 -kubectl get nodes --watch
 
